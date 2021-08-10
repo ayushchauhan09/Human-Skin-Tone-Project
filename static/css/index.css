@@ -1,0 +1,31 @@
+
+
+.home_image{
+  display: inline-block;
+  position: relative;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+
+
+.index_page_buttons{
+  margin-top: 20%;
+  display: inline-block;
+  position: relative;
+  height: 250px;
+  background-color: rgba(233, 145, 145, 0.435);
+  width: 50%;
+  padding: 50px;
+  color: rgb(0, 0, 0);
+  border: dashed;
+  border-radius: 10px;
+
+}
+
+.index_page_buttons a .btn{
+  border:2px solid white
+}
+
+

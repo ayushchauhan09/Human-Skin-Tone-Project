@@ -1,0 +1,55 @@
+<!-- load base.html file and statics -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div align="center" id="skintone">
+    <div class="fluid-container" >
+        <section >
+            <!-- if obj have some value it means the image is uploaded  -->
+        {% if obj %}
+            <h2 class="imagesuccess" >{{ obj.caption}} You've succesfully uploaded your image </h2>
+            <img src="{{ obj.image.url}}" alt="image" class="img-thumbnail" id="resultimg" >
+        {% endif %}
+        <br/> 
+
+        <!-- if skinto have some value it means result is ready to show -->
+        
+        {% if skinto %}
+        <h1 class="imageskintone">Skintone : {{ skinto }}</h1>
+        {% endif %}
+        
+        </section>
+        
+        
+            <div class="jumbotron">                  
+                <h2>Upload your image for detection</h2>
+                <!-- form to upload image -->
+                
+                <form action="SaveImage" method="POST" enctype="multipart/form-data"  >
+                    {% csrf_token %}
+
+                    <center>
+                    <div class="input form-group " >
+                        <input type="text" name="caption" placeholder="Your Name" id="input2"  class=" form-control" required >
+                    </div>
+                    <div class="input form-group">
+                    <input type="file" name="image" id="fileToUpload" style="background-color:white" class=" form-control">
+                    </div>
+                    </center>
+                    
+                    <input class="btn btn-primary " type="submit" style="background-color: brown;" value="Upload Image" >            
+                    
+                    
+                </form>
+                <!-- end form -->
+            </div>
+             
+        </section>
+
+    
+    </div>
+</div>    
+
+{% endblock %}    

@@ -1,0 +1,52 @@
+<!-- load base.html file and statics -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+  <section 
+    id="home" 
+    class="d-flex align-items-center position-relative vh-100 cover hero" 
+    style="background-image: url(../static/img/bg1.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;"
+  >
+    <div class="container-fluid container-fluid-max">
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <div class="featured-text text-center text-lg-left">
+                    <h1 style="font-family: 'Berkshire Swash', cursive;">
+                        Human Skintone
+                    </h1>
+                    <p id="anim1" class="text-black-50 mb-0" style="text-align: center;">
+                        "As its name suggests, Human Skin tone is a web portal that aims to detect your skin tone 
+                        and tells you whether it is Fair, Mild or Dark."
+                    </p>
+                    <br>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  </section>
+
+        
+    <!-- buttons for upload image -->
+    <section class="vh-100 bg-light" align="center">
+    <div class="index_page_buttons" >
+      
+        <h1 style="font-family: HappyTimesattheIKOBRegular;">Find Your Skintone</h1><br><br><br>
+        <center>
+          <a href="skintone.html" style="float: left; "><button class="btn btn-primary" style="margin-left: 200%; background-color: rgb(86, 0, 0);">Upload Image</button></a>
+        </center>
+        
+    </div>    
+    </section>
+
+
+    
+
+  </div>
+</div>
+
+
+{% endblock %}    
